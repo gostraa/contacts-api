@@ -21,7 +21,6 @@ const addContact = (req, res) => {
 const updateContact = (req, res) => {
   const { id } = req.query; 
   const updatedContact = req.body;
-
   const contacts = JSON.parse(fs.readFileSync(contactsFilePath));
   const index = contacts.findIndex(contact => contact.id === id);
 
