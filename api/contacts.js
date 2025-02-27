@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const contactsFilePath = path.join(__dirname, '../models/contacts.json');
+const express = require('express');
+const app = express();
+app.use(cors()); 
+app.use(express.json());
 
 
 const getContacts = (req, res) => {
